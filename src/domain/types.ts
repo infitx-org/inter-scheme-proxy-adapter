@@ -97,7 +97,7 @@ export interface IHttpServer {
 }
 
 export interface IAuthClient {
-  startAccessTokenUpdates: (cb: (token: string) => void) => void;
+  startAccessTokenUpdates: (cb: (token: string) => void) => Promise<void>;
   stopUpdates: () => void;
   getOidcToken: () => Promise<OIDCToken>;
 }
